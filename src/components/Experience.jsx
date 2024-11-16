@@ -6,7 +6,7 @@ const Experience = () => {
         company: "CodSoft",
         duration: "10 Sep 2024 - 10 Oct 2024",
         description: "I enhanced my web development skills by building dynamic and responsive web pages using HTML, CSS, and JavaScript.",
-        certificate: "/assets/codsoft.pdf",
+        
       },
       {
         id: 2,
@@ -14,7 +14,7 @@ const Experience = () => {
         company: "CodeAlpha",
         duration: "15 Sep 2024 - 15 Oct 2024",
         description: "Worked on building advanced websites with a focus on user experience and clean, maintainable code.",
-        certificate: "assets/alpha development.pdf",
+       
       },
       {
         id: 3,
@@ -22,7 +22,7 @@ const Experience = () => {
         company: "CodeAlpha",
         duration: "15 Sep 2024 - 15 Oct 2024",
         description: "Applied Python programming for various projects including automation and data analysis tasks.",
-        certificate: "assets/alpha python.pdf",
+        
       },
     ];
   
@@ -35,15 +35,13 @@ const Experience = () => {
           </div>
   
           <div className="grid gap-8 px-2 sm:px-0">
-            {experiences.map(({ id, title, company, duration, description, certificate }) => (
+            {experiences.map(({ id, title, company, duration, description }) => (
               <div key={id} className="bg-gray-700 p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold">{title}</h3>
               <p className="text-lg"><strong>Company:</strong> {company}</p>
               <p className="text-lg"><strong>Duration:</strong> {duration}</p>
               <p className="py-2 text-lg">{description}</p>
-              <a href={certificate} className="text-blue-400 hover:underline" download target="_blank" rel="noreferrer">
-                View Certificate
-              </a>
+              
             </div>
             ))}
           </div>
