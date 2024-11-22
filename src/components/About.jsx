@@ -1,30 +1,42 @@
+import React from "react";
 import HeroImage from "../assets/heroImage.png";
 
 const About = () => {
   return (
-    <div name="about" className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col md:flex-row items-center justify-center w-full h-full space-y-4 md:space-y-0">
-        
-        <div className="flex-1 text-center md:text-left">
-          <h2 className="text-3xl sm:text-4xl font-bold inline border-b-4 border-gray-500 mb-4">
+    <div
+      name="about"
+      className="w-full bg-gradient-to-b from-gray-800 to-black text-white py-12"
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      
+        <div className="flex justify-center pb-8">
+          <p className="text-4xl sm:text-5xl md:text-6xl font-bold inline border-b-4 border-gray-500">
             About
-          </h2>
-          <p className="text-xl sm:text-xl mt-4 leading-relaxed max-w-md">
-            Hello everyone, I am Aman Gupta, a web developer with a passion for
-            creating powerful and attractive websites. I love designing user-friendly sites that can be
-            accessed by anyone, and I find joy in delivering performance that
-            satisfies my clients on their personal devices. I look forward to the opportunity to contribute to your esteemed organization. That’s all from my side.
           </p>
         </div>
 
-        <div className="flex-1 mt-8 md:mt-0">
-          <img
-            src={HeroImage}
-            alt="Aman Gupta profile"
-            className="rounded-2xl w-1/2 mx-auto md:w-1/3 shadow-lg"
-          />
+        <div className="flex flex-col sm:flex-row justify-between items-center w-full space-y-8 sm:space-y-0">
+          
+          <div className="flex flex-col justify-center w-full sm:w-1/2 space-y-6 text-center sm:text-left">
+            <p className="text-xl sm:text-2xl">
+              Hello everyone, I am Aman Gupta, a web developer who urges to create
+              powerful and attractive websites. I love making new websites that are
+              easy to use and can be accessed by anyone. I am happy to have my clients
+              happy with the site’s performance, which they are able to see on their
+              personal devices. I hope I get the opportunity to work in your esteemed
+              organization. That’s all from my side.
+            </p>
+          </div>
+
+         
+          <div className="flex justify-center sm:justify-end items-center sm:w-1/2">
+            <img
+              src={HeroImage}
+              alt="Profile"
+              className="rounded-2xl w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3"
+            />
+          </div>
         </div>
-        
       </div>
     </div>
   );

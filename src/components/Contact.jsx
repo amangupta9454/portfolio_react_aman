@@ -1,73 +1,110 @@
+import React from "react";
+
 const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full min-h-screen bg-gradient-to-b from-black to-gray-800 p-6 text-white"
+      className="w-full bg-gradient-to-b from-gray-900 to-black text-white py-10"
     >
-      <div className="flex flex-col p-6 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Contact
+      <div className="max-w-screen-lg px-4 mx-auto">
+        
+        <div className="mb-6 text-center">
+          <p className="text-3xl font-bold inline border-b-4 border-gray-500">
+            Contact Me
           </p>
-          <p className="py-6">Submit the form to contact me</p>
         </div>
-        <div className="text-lg text-gray-300 mb-8 flex flex-col items-center space-y-2">
-          <p>Email: <a href="mailto:ag0567688@gmail.com" className="text-blue-400 underline">ag0567688@gmail.com</a></p>
-          <p>Mobile: <a href="tel:+919560472926" className="text-blue-400 underline">9560472926</a></p>
-          <p>WhatsApp: <a href="https://wa.me/919560472926" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">9560472926</a></p>
+
+        
+        <div className="mb-6 text-center sm:text-left">
+          <p className="text-xl">Feel free to get in touch with me:</p>
+          <ul className="text-lg mt-4 space-y-3">
+            <li>Email: <a href="mailto:ag0567688@gmail.com" className="text-cyan-500 hover:underline">ag0567688@gmail.com</a></li>
+            <li>Mobile: <a href="tel:+919560472926" className="text-cyan-500 hover:underline">+91 9560472926</a></li>
+            <li>WhatsApp: <a href="https://wa.me/919560472926" className="text-cyan-500 hover:underline">+91 9560472926</a></li>
+          </ul>
         </div>
-        <div className="flex justify-center items-center">
+
+        
+        <div className="flex justify-center">
           <form
             action="https://getform.io/f/amddkgwb"
             method="POST"
-            className="flex flex-col w-full md:w-1/2 space-y-4"
+            className="w-full max-w-xl p-6 bg-gray-800 rounded-lg shadow-md"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-              required
-            />
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-lg font-medium">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                className="w-full px-4 py-2 mt-2 text-black rounded-md bg-gray-100 focus:outline-none"
+              />
+            </div>
 
-            <input
-              type="tel"
-              name="mobile"
-              placeholder="Enter your mobile number"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-              required
-            />
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-lg font-medium">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                className="w-full px-4 py-2 mt-2 text-black rounded-md bg-gray-100 focus:outline-none"
+              />
+            </div>
 
-            <select
-              name="gender"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-              required
+            <div className="mb-4">
+              <label htmlFor="mobile" className="block text-lg font-medium">
+                Mobile Number
+              </label>
+              <input
+                type="tel"
+                name="mobile"
+                id="mobile"
+                required
+                className="w-full px-4 py-2 mt-2 text-black rounded-md bg-gray-100 focus:outline-none"
+              />
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="gender" className="block text-lg font-medium">
+                Gender
+              </label>
+              <select
+                name="gender"
+                id="gender"
+                required
+                className="w-full px-4 py-2 mt-2 text-black rounded-md bg-gray-100 focus:outline-none"
+              >
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="message" className="block text-lg font-medium">
+                Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                required
+                rows="4"
+                className="w-full px-4 py-2 mt-2 text-black rounded-md bg-gray-100 focus:outline-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-md shadow-lg hover:scale-105 transition-all duration-200"
             >
-              <option value="" disabled selected>
-                Select Gender
-              </option>
-              <option value="male" className="text-black">Male</option>
-              <option value="female" className="text-black">Female</option>
-              <option value="other" className="text-black">Other</option>
-            </select>
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-              required
-            />
-
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Enter your message"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-            ></textarea>
-
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Connect
+              Connect Me
             </button>
           </form>
         </div>

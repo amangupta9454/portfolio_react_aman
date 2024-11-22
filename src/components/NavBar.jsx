@@ -1,116 +1,68 @@
-import React, {  useState } from "react";
-import { Link } from "react-scroll";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [nav, setNav] = useState(false);
 
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    return (
-      <nav className="bg-gray-800 text-white p-4 fixed w-full top-0 left-0 z-10">
-        <div className="flex justify-between items-center max-w-screen-xl mx-auto">
-         
-          <div className="text-2xl font-bold whitespace-nowrap">
-            <Link to="home" smooth duration={300} className="cursor-pointer">
-              Aman Gupta Portfolio
-            </Link>
-          </div>
-  
-         
-          <div className="text-2xl cursor-pointer md:hidden" onClick={toggleMenu}>
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </div>
-  
-         
-          <ul
-            className={`md:flex md:items-center md:space-x-6 md:static absolute top-full left-0 w-full bg-gray-800 text-center md:text-right transition-all duration-300 ease-in ${
-              isOpen ? "block" : "hidden"
-            }`}
+  const links = [
+    { id: 1, link: "home" },
+    { id: 2, link: "about" },
+    { id: 3, link: "skills" },
+    { id: 4, link: "experience" },
+    { id: 5, link: "qualification" },
+    { id: 6, link: "contact" },
+  ];
+
+  return (
+    <div className="flex justify-between items-center w-full h-16 px-4 bg-violet-950 text-white fixed z-10">
+      <div>
+        <h1 className="text-4xl font-bold ml-2">Aman's Portfolio</h1>
+      </div>
+
+      <ul className="hidden md:flex space-x-6">
+        {links.map(({ id, link }) => (
+          <li
+            key={id}
+            className="cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200"
           >
-            <li className="md:ml-auto">
+            <Link to={link} smooth={true} duration={500} offset={-80}>
+              {link}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      <div
+        onClick={() => setNav(!nav)}
+        className="cursor-pointer z-10 text-white md:hidden"
+      >
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+      </div>
+
+      {/* Mobile Menu */}
+      {nav && (
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-400 md:hidden">
+          {links.map(({ id, link }) => (
+            <li
+              key={id}
+              className="px-4 cursor-pointer capitalize py-6 text-2xl"
+            >
               <Link
-                to="home"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
+                onClick={() => setNav(false)} // Close menu on link click
+                to={link}
+                smooth={true}
+                duration={500}
+                offset={-80}
               >
-                Home
+                {link}
               </Link>
             </li>
-            <li>
-              <Link
-                to="about"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="skills"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="experience"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Experience
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="qualification"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Qualification
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact"
-                smooth
-                duration={300}
-                className="block p-3 md:inline cursor-pointer hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  };
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
 
 export default NavBar;

@@ -1,48 +1,54 @@
+import React from "react";
+
 const Qualification = () => {
-    return (
-      <div name="qualification" className="w-full min-h-screen bg-gradient-to-b from-gray-800 to-black text-white">
-        <div className="max-w-screen-lg mx-auto p-5 flex flex-col justify-center w-full h-full">
-          <div>
-            <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">Qualification</p>
-            <p className="py-6">My academic qualifications are as follows:</p>
-          </div>
-  
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm sm:text-base border border-gray-500">
-              <thead>
-                <tr className="bg-gray-700 text-white">
-                  <th className="py-2 px-4 border border-gray-500">Qualification</th>
-                  <th className="py-2 px-4 border border-gray-500">Institute</th>
-                  <th className="py-2 px-4 border border-gray-500">Year</th>
-                  <th className="py-2 px-4 border border-gray-500">Percentage/SGPA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border border-gray-500">
-                  <td className="py-2 px-4 border border-gray-500">B.Tech in Computer Science & Engineering</td>
-                  <td className="py-2 px-4 border border-gray-500">Hi-Tech Institute of Engineering and Technology (HIET), Ghaziabad</td>
-                  <td className="py-2 px-4 border border-gray-500">2023-2027</td>
-                  <td className="py-2 px-4 border border-gray-500">SGPA: 7.2</td>
-                </tr>
-                <tr className="border border-gray-500">
-                  <td className="py-2 px-4 border border-gray-500">Intermediate</td>
-                  <td className="py-2 px-4 border border-gray-500">New Modern Children School, Dullahapur, Ghazipur</td>
-                  <td className="py-2 px-4 border border-gray-500">2020-2022</td>
-                  <td className="py-2 px-4 border border-gray-500">59%</td>
-                </tr>
-                <tr className="border border-gray-500">
-                  <td className="py-2 px-4 border border-gray-500">High School</td>
-                  <td className="py-2 px-4 border border-gray-500">Shree Balkrishna Public Vidyalaya, Sherpur, Mau</td>
-                  <td className="py-2 px-4 border border-gray-500">2018-2020</td>
-                  <td className="py-2 px-4 border border-gray-500">66.8%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  return (
+    <div
+      name="qualification"
+      className="w-full bg-gradient-to-b from-gray-800 to-black text-white py-10"
+    >
+      <div className="max-w-screen-lg px-4 mx-auto">
+       
+        <div className="mb-6 text-center">
+          <p className="text-3xl font-bold inline border-b-4 border-gray-500">
+            Qualification
+          </p>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-white border-collapse">
+            <thead className="bg-blue-600">
+              <tr>
+                <th className="px-4 py-2 text-sm sm:text-lg font-semibold">Degree</th>
+                <th className="px-4 py-2 text-sm sm:text-lg font-semibold">Institute</th>
+                <th className="px-4 py-2 text-sm sm:text-lg font-semibold">Year</th>
+                <th className="px-4 py-2 text-sm sm:text-lg font-semibold">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-t border-white hover:bg-violet-700">
+                <td className="px-4 py-3 text-sm sm:text-base truncate">B.Tech</td>
+                <td className="px-4 py-3 text-sm sm:text-base truncate">Hi-Tech Institute, Ghaziabad</td>
+                <td className="px-4 py-3 text-sm sm:text-base">2023-2027</td>
+                <td className="px-4 py-3 text-sm sm:text-base truncate">7.2 SGPA</td>
+              </tr>
+              <tr className="border-t border-white hover:bg-violet-700">
+                <td className="px-4 py-3 text-sm sm:text-base truncate">Intermediate</td>
+                <td className="px-4 py-3 text-sm sm:text-base truncate">New Modern Children School</td>
+                <td className="px-4 py-3 text-sm sm:text-base">2020-2022</td>
+                <td className="px-4 py-3 text-sm sm:text-base truncate">59%</td>
+              </tr>
+              <tr className="border-t border-white hover:bg-violet-700">
+                <td className="px-4 py-3 text-sm sm:text-base truncate">High School</td>
+                <td className="px-4 py-3 text-sm sm:text-base truncate">Shree Balkrishna Vidyalaya</td>
+                <td className="px-4 py-3 text-sm sm:text-base">2018-2020</td>
+                <td className="px-4 py-3 text-sm sm:text-base truncate">66.8%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    );
-  };
-  
-  export default Qualification;
-  
+    </div>
+  );
+};
+
+export default Qualification;

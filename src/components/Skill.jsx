@@ -14,17 +14,28 @@ const Skill = () => {
   ];
 
   return (
-    <div name="skills" className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
-      <div className="max-w-screen-lg p-4 py-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div>
-          <p className="text-3xl font-bold inline border-b-4 border-gray-500">Skills</p>
-          <p className="py-6 text-lg">Here are some technologies I am proficient in:</p>
+    <div
+      name="skills"
+      className="w-full bg-gradient-to-b from-gray-900 to-black text-white py-12"
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        
+        <div className="flex flex-col items-center mb-8">
+          <p className="text-4xl font-bold border-b-4 border-gray-500 inline-block">
+            Skills
+          </p>
+          <p className="mt-4 text-lg text-center">
+            Here are some technologies I am proficient in:
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+        
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-4 sm:px-0">
           {skills.map(({ id, name, icon }) => (
-            <div key={id} className="flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-violet-500/50">
-              
+            <div
+              key={id}
+              className="flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-violet-500/50"
+            >
               <div className="bg-gray-800 p-6 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300">
                 {icon}
               </div>
