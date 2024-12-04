@@ -31,10 +31,10 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-center px-4 space-y-6 md:space-x-12">
         <div className="flex flex-col items-center justify-center md:items-start">
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white">
-            I am Aman Gupta
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-white whitespace-nowrap">
+            I am <span className="text-violet-500">Aman Gupta</span>
           </h2>
-          <p className="text-violet-900 py-4 max-w-md text-center md:text-left">
+          <p className="text-green-600 py-4 max-w-md text-center md:text-left">
             <span
               ref={typedRef}
               className="text-sm sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl font-bold"
@@ -77,7 +77,7 @@ const Home = () => {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-2xl w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4"
+            className="rounded-2xl w-full sm:w-2/3 md:w-3/4 lg:w-[400px] xl:w-[500px] transition-transform duration-500 hover:scale-105"
           />
         </div>
       </div>
