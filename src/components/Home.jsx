@@ -31,9 +31,12 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-center px-4 space-y-6 md:space-x-12">
         <div className="flex flex-col items-center justify-center md:items-start">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-white whitespace-nowrap">
-            I am <span className="text-violet-500">Aman Gupta</span>
-          </h2>
+        <h2
+  className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-white whitespace-nowrap animate-fadeIn hover:scale-105 hover:tracking-wide transition-all duration-300"
+>
+  I am <span className="text-yellow-500 hover:text-yellow-300 transition-colors duration-300">Aman Gupta</span>
+</h2>
+
           <p className="text-green-600 py-4 max-w-md text-center md:text-left">
             <span
               ref={typedRef}
