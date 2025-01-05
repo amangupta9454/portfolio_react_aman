@@ -10,21 +10,22 @@ const NavBar = () => {
     { id: 2, link: "about" },
     { id: 3, link: "skills" },
     { id: 4, link: "experience" },
-    { id: 5, link: "qualification" },
-    { id: 6, link: "contact" },
+    { id: 5, link: "projects" },
+    { id: 6, link: "qualification" },
+    { id: 7, link: "contact" },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-16 px-4 bg-violet-950 text-white fixed z-10">
+    <div className="flex justify-between items-center w-full h-16 px-4 bg-gradient-to-r from-violet-900 via-cyan-800 to-gray-900 text-white fixed z-10">
       <div>
-        <h1 className="text-4xl font-bold ml-2">Aman's Portfolio</h1>
+        <h1 className="text-4xl font-bold ml-2 hover:text-pink-800 hover:animate-bounce hover:underline">Aman's Portfolio</h1>
       </div>
 
       <ul className="hidden md:flex space-x-6">
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200"
+            className="cursor-pointer capitalize font-bold text-lg text-white  duration-200 hover:underline hover-animate-spin hover:text-green-600"
           >
             <Link to={link} smooth={true} duration={500} offset={-80}>
               {link}

@@ -1,10 +1,13 @@
 import React from "react";
-
+import starsImage from "../assets/star.jpg";
 const Qualification = () => {
   return (
     <div
       name="qualification"
       className="w-full bg-gradient-to-b from-gray-800 to-black text-white py-10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${starsImage})`,
+      }}
     >
       <div className="max-w-screen-lg px-4 mx-auto">
        

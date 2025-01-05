@@ -1,11 +1,14 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
-
+import starsImage from "../assets/star.jpg";
 const About = () => {
   return (
     <div
       name="about"
       className="w-full bg-gradient-to-b from-gray-800 to-black text-white py-12"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${starsImage})`,
+      }}
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
       

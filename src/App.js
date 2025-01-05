@@ -4,7 +4,7 @@ import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
 import Skill from "./components/Skill";
 import Experience from "./components/Experience";
-// import Project from "./components/Project";
+import Projects from "./components/Projects";
 import Qualification from "./components/Qualification";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -17,15 +17,11 @@ function App() {
       <About />
       <Skill />
       <Experience />
+      <Projects />
       <Qualification />
       <Contact />
       <Footer />
       
-      {/* 
-      
-      <Project />
-      
-       */} 
     </div>
   );
 }

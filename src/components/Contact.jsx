@@ -1,10 +1,13 @@
 import React from "react";
-
+import starsImage from "../assets/star.jpg";
 const Contact = () => {
   return (
     <div
       name="contact"
       className="w-full bg-gradient-to-b from-gray-900 to-black text-white py-10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${starsImage})`,
+      }}
     >
       <div className="max-w-screen-lg px-4 mx-auto">
         
@@ -16,8 +19,8 @@ const Contact = () => {
 
         
         <div className="mb-6 text-center sm:text-left">
-          <p className="text-xl">Feel free to get in touch with me:</p>
-          <ul className="text-lg mt-4 space-y-3">
+          <p className="text-xl flex justify-center item-center">Feel free to get in touch with me:</p>
+          <ul className="text-lg mt-4 space-y-3 text-center">
             <li>Email: <a href="mailto:ag0567688@gmail.com" className="text-cyan-500 hover:underline">ag0567688@gmail.com</a></li>
             <li>Mobile: <a href="tel:+919560472926" className="text-cyan-500 hover:underline">+91 9560472926</a></li>
             <li>WhatsApp: <a href="https://wa.me/919560472926" className="text-cyan-500 hover:underline">+91 9560472926</a></li>
@@ -25,11 +28,15 @@ const Contact = () => {
         </div>
 
         
-        <div className="flex justify-center">
+        <div className="flex justify-center"
+        >
           <form
             action="https://getform.io/f/amddkgwb"
             method="POST"
             className="w-full max-w-xl p-6 bg-gray-800 rounded-lg shadow-md"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${starsImage})`,
+            }}
           >
             <div className="mb-4">
               <label htmlFor="name" className="block text-lg font-medium">

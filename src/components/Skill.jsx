@@ -1,6 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase } from "react-icons/fa";
 import { SiTailwindcss, SiPython, SiCplusplus } from "react-icons/si";
-
+import starsImage from "../assets/star.jpg";
 const Skill = () => {
   const skills = [
     { id: 1, name: "HTML5", icon: <FaHtml5 size={40} className="text-orange-600" /> },
@@ -17,6 +17,9 @@ const Skill = () => {
     <div
       name="skills"
       className="w-full bg-gradient-to-b from-gray-900 to-black text-white py-12"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${starsImage})`,
+      }}
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
         

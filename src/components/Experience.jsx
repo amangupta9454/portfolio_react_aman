@@ -1,5 +1,5 @@
 import React from "react";
-
+import starsImage from "../assets/star.jpg";
 const Experience = () => {
   const experiences = [
     {
@@ -35,6 +35,9 @@ const Experience = () => {
     <div
       name="experience"
       className="w-full bg-gradient-to-b from-gray-900 to-black text-white py-12 overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${starsImage})`,
+      }}
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
        

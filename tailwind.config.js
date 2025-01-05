@@ -10,7 +10,8 @@ module.exports = {
         },
       },
       animation: {
-        fadeIn: 'fadeIn 2s ease-in-out', // Define fade-in animation with duration and easing
+        fadeIn: 'fadeIn 2s ease-in-out',
+        
       },
     },
     screens: {
