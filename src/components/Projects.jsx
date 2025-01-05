@@ -18,7 +18,7 @@ const Projects = () => {
       description: "Created using HTML, CSS, and JavaScript.",
       image: calculatorImage, 
       sourceCode: "https://github.com/amangupta9454/",
-      livePreview: "",
+      livePreview: "https://amangupta9454.github.io/Calculator/calculator.html",
     },
   ];
 
